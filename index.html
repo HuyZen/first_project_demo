@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HCMUTE Pay</title>
+    <link rel="stylesheet" href="./public/style_index.css">
+    <link rel="stylesheet" href="./public/res_index.css">
+    <link rel="shortcut icon" href="https://utex.hcmute.edu.vn/theme/image.php/maker/theme/1634220818/favicon" />
+    <link rel="stylesheet" href="./public/fonts/themify-icons/themify-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="main">
+
+        <!-- Navigation -->
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo"> Electric Payment</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/service">SERVICE</a></li>
+                    
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To Text">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="content-section">
+                <div class="row contact-content">
+                    <div class="content-title col col-half">
+                        <h1><br><span>HCMUTE</span>  <br>BLOCKCHAIN</h1>
+                        <button class="cn"><a href="#">JOIN US</a></button>
+                    </div>
+
+                    <div class="form col col-half" >
+                        <h2>Login Here</h2>
+                        <form>
+                            <input type="text" name="username" placeholder="Your ID" id="username">
+                            <input type="password" name="password" placeholder="Your Password" id="password">
+                            <button class="btnn" onclick="login()" name="dangnhap" type="button">Login</button> 
+                            <p>
+                                Have a problem?
+                            </p>
+                            
+                            <p class="ct"><a href="/contact">Contact Us!</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/dhspkt.hcmute"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/hcmutetv/"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/c/UTETVLiveChannel"><i class="ti-youtube"></i></a>
+                <a href="https://www.pinterest.com/pin/243546292338337142/"><i class="ti-pinterest"></i></a>
+                <a href="https://twitter.com/hoachithanh/status/1172762478897508353?s=20&t=3AkDhj28uBXFUl4191PIPg"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="https://www.facebook.com/Đồ-án-Chuyên-đề-Bộ-môn-Điện-Công-Nghiệp-102934184417451">hdp.hcmute</a></p>
+        </div>
+    </div>
+
+    </div>
+
+    <script >
+        function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+        }
+
+        function login(){
+              $.ajax({
+                  url:'/',
+                  method:'post',
+                  data: {
+                      username: $('#username').val(),
+                      password: $('#password').val()
+                  }
+              }).then(data=>{
+                if(!data.error){
+                 setCookie('token',data.token,1)
+                
+                 window.location.href="/home"
+              }
+                 
+              }).catch(err=>{
+                  console.log(err.responseJSON,'err');
+              })
+          }
+
+
+    </script>
+</body>  
+</html>

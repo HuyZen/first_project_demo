@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", innitial-scale="1.0">
+    <title>Statistical | HCMUTE Payment</title>
+    <link rel="stylesheet" href="./public/style_stat.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./public/fonts/themify-icons/themify-icons.css">
+    <link rel="shortcut icon" href="https://utex.hcmute.edu.vn/theme/image.php/maker/theme/1634220818/favicon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            <img src="/public/logo.webp" class="logo" >
+            <ul>
+                <li><a href="/home">Home page</a></li>
+                <li><a href="/stat">Statistical</a></li>
+                <li><a href="/payment">Payment</a></li>
+            </ul>
+
+            <button class="button-29" type="button" onclick="deleteCookie()">Log out</button>
+            
+        </nav>
+
+            <div class="dothi">
+                <h3>Customer: Thiem Nguyen Minh Huy</h3>
+                <iframe class="dothi1" src="https://charts.mongodb.com/charts-project-0-blhfb/embed/charts?id=62c057fa-6d77-4a54-8c30-0fc61c5f5398&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+                <br>
+                <br>
+                <iframe class="dothi2"  src="https://charts.mongodb.com/charts-project-0-blhfb/embed/charts?id=62c059d1-6bc4-47d0-8f12-15b909c0ec8e&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+            </div>
+
+            <div id="footer">
+                <div class="social-list">
+                    <a href="https://www.facebook.com/dhspkt.hcmute"><i class="ti-facebook"></i></a>
+                    <a href="https://www.instagram.com/hcmutetv/"><i class="ti-instagram"></i></a>
+                    <a href="https://www.youtube.com/c/UTETVLiveChannel"><i class="ti-youtube"></i></a>
+                    <a href="https://www.pinterest.com/pin/243546292338337142/"><i class="ti-pinterest"></i></a>
+                    <a href="https://twitter.com/hoachithanh/status/1172762478897508353?s=20&t=3AkDhj28uBXFUl4191PIPg"><i class="ti-twitter-alt"></i></a>
+                    <a href="https://www.linkedin.com"><i class="ti-linkedin"></i></a>
+                </div>
+                <p class="copyright">Powered by <a href="https://www.facebook.com/Đồ-án-Chuyên-đề-Bộ-môn-Điện-Công-Nghiệp-102934184417451">hdp.hcmute</a></p>
+            </div>
+    </div>
+    
+    <script src=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+
+    <script>
+       config={
+        
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d",
+
+       }
+        flatpickr("input[type=datetime-local]", config);
+    </script>
+    <script>
+           let myChart=document.getElementById('myChart').getContext('2d'); 
+           let massPopChart= new Chart(myChart,{
+                type:'bar',
+                data:{
+                    labels:[],
+                    dataset:[]
+                },
+
+           });
+           options:{}
+    </script>
+    <script>    
+    function deleteCookie(){
+        document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+        location.reload();
+    }
+    </script>
+</body>
+
+
+</html>

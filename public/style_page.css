@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    background-image: url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 7%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); */
+}
+nav ul{
+    flex: 1;
+
+}
+nav ul li{
+    display: inline-block;
+    margin: 30px 30px;
+    margin-left: 80px;
+    font-size: 18px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s ease-in-out;
+}
+nav ul li a:hover{
+  color:red;
+}
+
+nav .btn{
+  margin-right: 20px;
+}
+
+nav .bt{
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: Arial;
+    font-size: 14px;
+}
+.content{
+    margin-top: 12%;
+}
+.content h1{
+    font-size: 88px;
+    margin-bottom: 15px;
+    color: #ff960b;
+}
+.content p{
+    line-height:30px;
+    font-size: 16px;
+}
+
+.coin-list{
+    margin: 47px 0;
+    left: 5%;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+
+}
+.coin{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0 15px;
+    color:#ff960b;
+    border: 1px solid white;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+.coin img{
+    width: 40px;
+    margin-right: 10px;
+}
+.coin h3{
+    color: white;
+    margin-bottom: 5px;
+    
+}
+
+
+
+/* CSS log out */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+/* CSS connect wallet*/
+.btn {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  .btn {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+  .btn:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+
+
+/* CSS click to link with payment*/
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+  /* Footer */
+  #footer {
+    margin-top: 20px;
+    padding: 90px 16px;
+    text-align: center;
+  }
+  
+  .social-list {
+    font-size: 30px;   
+  }
+  
+  .social-list a {
+    color: rgba(236, 220, 220, 0.6);
+    text-decoration: none;
+    padding: 0 16px;
+  }
+  
+  .copyright a:hover,
+  .social-list a:hover {
+    color: rgba(244, 230, 230, 0.4); 
+  } 
+  
+  .copyright {
+    color: rgba(236, 220, 220, 0.6);
+    margin-top: 15px;
+  }
+  
+  .copyright a {
+    color: rgba(236, 220, 220, 0.6);
+  }
+

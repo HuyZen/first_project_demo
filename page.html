@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", innitial-scale="1.0">
+    <title>Home Page | HCMUTE Pay</title>
+    <link rel="stylesheet" href="./public/style_page.css">
+    <link rel="stylesheet" href="./public/fonts/themify-icons/themify-icons.css">
+    <link rel="shortcut icon" href="https://utex.hcmute.edu.vn/theme/image.php/maker/theme/1634220818/favicon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./scripts/web3.js"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body>
+   
+    <div class="container">
+        <nav>
+            <img src="./public/logo.webp" class="logo">
+            <ul>
+                <li><a href="/home">Home Page</a></li> 
+                <li><a href="/stat">Statistical</a></li>
+                <li><a href="/payment">Payment</a></li>
+            </ul>
+            <button class="button-29" type="button" onclick="deleteCookie()">Log out</button>
+        </nav>
+
+         
+        <div class="content">
+            <h1> Smart Contract </h1>
+            <p style="font-size: 18px; color: yellow;">We provide the service to pay your electricity bill in just a few seconds</p><br>
+            <a href="/payment" class="button-74"> Make instant transactions with ETH</a>
+
+            <div class="coin-list">
+                <div class="coin">
+                    <img src="./public/bitcon.png" >
+                    <div>
+                        <h3>$<span id="bitcoin"> </span> </h3>
+                        <p>Bitcoin</p>
+                    </div>
+                </div>
+                <div class="coin">
+                    <img src="./public/ethereum.png" >
+                    <div>
+                        <h3>$<span id="ethereum"></span></h3>
+                        <p>Ethereum</p>
+                    </div>
+                </div>
+                <div class="coin">
+                    <img src="./public/dog.jpg" >
+                    <div>
+                        <h3>$<span id="dogecoin"></span></h3>
+                        <p>Dogcoin</p>
+                    </div>
+                </div>   
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/dhspkt.hcmute"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/hcmutetv/"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/c/UTETVLiveChannel"><i class="ti-youtube"></i></a>
+                <a href="https://www.pinterest.com/pin/243546292338337142/"><i class="ti-pinterest"></i></a>
+                <a href="https://twitter.com/hoachithanh/status/1172762478897508353?s=20&t=3AkDhj28uBXFUl4191PIPg"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="https://www.facebook.com/Đồ-án-Chuyên-đề-Bộ-môn-Điện-Công-Nghiệp-102934184417451">hdp.hcmute</a></p>
+        </div>
+    </div>
+
+<script> //hien thi gia token
+var btc = document.getElementById("bitcoin");
+    var eth = document.getElementById("ethereum");
+    var doge = document.getElementById("dogecoin");
+    
+    var settings = {
+        "async" : true,
+        "scrossDomain" : true,
+        "url" :"https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin&vs_currencies=usd",
+        "method": "GET",
+        "header":{}
+    
+    }
+    $.ajax(settings).done(function(response){
+        btc.innerHTML = response.bitcoin.usd;
+        eth.innerHTML = response.ethereum.usd;
+        doge.innerHTML = response.dogecoin.usd;
+    });
+
+    function deleteCookie(){
+        document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+        location.reload();
+    }
+</script>
+
+
+
+</body>
+
+</html>

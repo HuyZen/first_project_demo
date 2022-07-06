@@ -1,0 +1,23 @@
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    .main {
+        height: 90vh;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .khung {
+        width: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    #footer {
+        margin-top: 200px;
+    }
+}
