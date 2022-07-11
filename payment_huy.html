@@ -30,7 +30,57 @@
        </h2>
        <br>
 
-        <div class="invoice-box">
+        <div class="invoice-box-success" id="payBoxSucc">
+                    <table cellpadding="0" cellspacing="0" >
+                        <tr class="top">
+                            <td colspan="2">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h4>
+                                                Electricity usage time
+                                            </h4>
+                                        </td> 
+                                        <td>
+                                              From: 1/6/2022 <br>
+                                              To:   30/6/2022 <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- end the table -->
+                            </td>
+                        </tr>
+
+                        <tr class="information">
+                            <td colspan="2">
+                              <!-- inner table start here -->
+                              <table>
+                                  <tr>
+                                     <td>
+                                        Customer: Thiem Nguyen Minh Huy <br>
+                                        Address: 223A, Hoang Dieu 2 Street ,Thu Duc City  <br>
+                                     </td>
+                                     <td>
+                                        Phone: 0703651448 <br>
+                                        Email: minhhuy@gmail.com <br>
+                                     </td>
+                                  </tr>
+                              </table>
+                              <!-- inner table end -->
+                            </td>
+                        </tr>
+
+                        <tr class="heading">
+                            <td>
+                               <div class="icon-succ"> <i class="gg-check-o"></i> </div>
+                                YOUR TRANSACTION HAS SUCCESSFUL!!
+                            </td>
+                        </tr>
+
+                    </table>
+        </div>
+
+                <div class="invoice-box" id="payBox">
                     <table cellpadding="0" cellspacing="0" >
                         <tr class="top">
                             <td colspan="2">
@@ -107,6 +157,9 @@
 
                     </table>
         </div>
+
+
+
         <br>
         
         <button class="btn-pay" onclick="payment()" id="pay"><span class="text">Pay your bill</span></button>
@@ -168,7 +221,9 @@
         ],
         })
         .then((result) =>{
-            document.getElementById('pay').setAttribute('disabled','true')
+            document.getElementById('pay').style.display = 'none';
+            document.getElementById('payBox').style.display = 'none';
+            document.getElementById('payBoxSucc').style.display = 'block';
         })
         .catch((error) => {
         });
