@@ -246,3 +246,29 @@ ul li a:hover{
   .copyright a {
     color: rgba(236, 220, 220, 0.6);
   }
+
+  /* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .navbar{
+        width: 100%;
+    }
+
+    .search {
+        display: none;
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 63.9375em) {
+
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+
+}

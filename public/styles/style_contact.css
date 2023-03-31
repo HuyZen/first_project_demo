@@ -189,3 +189,27 @@ textarea:valid~label
   .copyright a {
     color: rgba(236, 220, 220, 0.6);
   }
+
+  /* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    .main {
+        height: 90vh;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .khung {
+        width: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    #footer {
+        margin-top: 200px;
+    }
+}
